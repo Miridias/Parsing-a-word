@@ -1,0 +1,19 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net5.0</TargetFramework>
+    <RootNamespace>Parsing_a_word</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Folder Include="Static_files\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="Static_files\de-dictionary.tsv">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
+</Project>
