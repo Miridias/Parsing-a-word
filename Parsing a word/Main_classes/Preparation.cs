@@ -14,10 +14,7 @@ namespace Parsing_a_word.Main_classes
         public string ChosingAPath()
         {
             PathToFolder = Console.ReadLine();
-            if (PathToFolder != "")
-            {
-                directory = new DirectoryInfo(PathToFolder);
-            }
+            if (PathToFolder != "") directory = new DirectoryInfo(PathToFolder);
             if (directory == null || !directory.Exists)
             {
                 Console.Write("Указаного пути не существует! Введите другой путь: ");
