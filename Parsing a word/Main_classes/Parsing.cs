@@ -67,7 +67,11 @@ namespace Parsing_a_word.Main_classes
                         if (dictionaryGeneration[j].Length == i + 1) interimList.Add(dictionaryGeneration[j]);
                     }
                 }
-                if (newDictionaryGeneration.Count == 1) return (newDictionaryGeneration[0], true);
+                if (newDictionaryGeneration.Count == 1)
+                {
+                    if (Confirmation(testWord, newDictionaryGeneration[0])) return (newDictionaryGeneration[0], true);
+                    else return (testWord, false);
+                }
                 // Проверка найденой части слова на соответствие и передача его из метода
                 else if (newDictionaryGeneration.Count == 0)
                 {
