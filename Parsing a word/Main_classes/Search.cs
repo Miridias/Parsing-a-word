@@ -2,7 +2,6 @@
 using System;
 using System.Collections.Generic;
 using System.IO;
-using System.Text.RegularExpressions;
 
 namespace Parsing_a_word.Main_classes
 {
@@ -10,8 +9,6 @@ namespace Parsing_a_word.Main_classes
     {
         private List<string> allWordsInFile = new();
         private DirectoryInfo directory;
-        private Regex regex;
-        private string input;
         private string _pathToTheFile { get; set; }
         
         // Поиск файла в папке по указаному пути
