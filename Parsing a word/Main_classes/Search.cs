@@ -61,18 +61,11 @@ namespace Parsing_a_word.Main_classes
         // Чтение слов из файла и их запись в колекцию
         public List<string> ReadTextInFile(string pathToFolder)
         {
-            StreamReader reader = File.OpenText(pathToFolder);
-            string pattern = @"[\w]+\r*";
-            regex = new Regex(pattern);
-            input = reader.ReadToEnd();
-            var allWords = regex.Matches(input);
-            reader.Close();
-            for (int i = 0; i < allWords.Count; i++)
+            string[] allWords = File.ReadAllLines(pathToFolder);
+            for (int i = 0; i < allWords.Length; i++)
             {
-                if (i < allWords.Count - 1) allWordsInFile.Add(allWords[i].Value.ToLower()[..^1]);
-                else allWordsInFile.Add(allWords[i].Value.ToLower());
+                allWordsInFile.Add(allWords[i].ToLower());
             }
-            reader.Close();
             return allWordsInFile;
         }
     }
